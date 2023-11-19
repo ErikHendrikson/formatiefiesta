@@ -41,7 +41,22 @@ body {
     color: #fff;
 }
 
-.party-display__snackbar {
-    width: 40px !important;
-    max-width: 40px !important;
+.success-snackbar {
+    color: white;
+    --mdc-snackbar-container-color: rgb(14, 138, 14);
+
+    .mat-simple-snackbar-action {
+        color: white;
+    }
+}
+
+.error-snackbar {
+    max-width: max-content !important;
+    color: white;
+    --mdc-snackbar-container-color: rgb(222, 53, 53);
+    border-color: #f5c6cb;
+
+    .mat-simple-snackbar-action {
+        color: white;
+    }
 }

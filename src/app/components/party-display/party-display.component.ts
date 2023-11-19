@@ -18,7 +18,7 @@ export class PartyDisplayComponent {
         const selectedPartyIds = this.selectedParties.map(party => party.id);
 
         if (!selectedPartyIds.length) {
-            this.showCopiedMessage('Kies eerst jouw regering');
+            this.showCopiedMessage('Kies eerst jouw regering', 'error-snackbar');
             return;
         }
 
@@ -37,13 +37,14 @@ export class PartyDisplayComponent {
 
         if (action === 'link') {
             this.clipboard.copy(link);
-            this.showCopiedMessage('Gekopieerd');
+            this.showCopiedMessage('Gekopieerd', 'success-snackbar');
         }
     }
 
-    private showCopiedMessage(message: string) {
+    private showCopiedMessage(message: string, className: string) {
         this.snackBar.open(message, '', {
             duration: 2000,
+            panelClass: className
         });
     }
 }
