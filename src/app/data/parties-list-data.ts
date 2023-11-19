@@ -17,7 +17,7 @@ export const partiesListData: Party[] = [
     { id: 14, label: 'BBB', value: 7, color: '#5F0080' },
     { id: 15, label: '50PLUS', value: 0, color: '#EB1D24' },
     { id: 16, label: 'BIJ1', value: 1, color: '#2D308E' },
-    { id: 17, label: 'Nieuw Sociaal Contract', value: 23, color: '#0074B0' },
+    { id: 17, label: 'Nieuw Sociaal Contract', value: 23, color: '#13123B' },
     { id: 18, label: 'BVNL/Groep Van Haga', value: 1, color: '#004080' },
     { id: 19, label: 'Piratenpartij-De Groenen', value: 0, color: '#5BBD2C' },
     { id: 20, label: 'Splinter', value: 0, color: '#0B7D62' },
