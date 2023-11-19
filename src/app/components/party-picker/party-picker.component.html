@@ -1,0 +1,11 @@
+<form [formGroup]="partiesForm">
+    <mat-chip-listbox class="mat-mdc-chip-set-stacked" [multiple]="true" aria-label="Parties selection"
+        formControlName="selectedOptions">
+        <mat-chip-option *ngFor="let party of parties" [value]="party.label">
+            <div class="party-picker__option">
+                <span>{{ party.label }}</span>
+                <span>{{ party.value }}</span>
+            </div>
+        </mat-chip-option>
+    </mat-chip-listbox>
+</form>

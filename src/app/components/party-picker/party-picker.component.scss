@@ -1,0 +1,13 @@
+.party-picker {
+
+    &__option {
+        display: flex;
+    }
+}
+
+.mat-mdc-chip-set {
+        max-width: max-content;
+        max-width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+        max-width: -moz-max-content;
+
+}
