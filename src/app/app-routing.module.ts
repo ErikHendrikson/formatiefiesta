@@ -4,8 +4,9 @@ import { FormationCreatorContainerComponent } from './containers/formation-creat
 import { FormationViewerContainerComponent } from './containers/formation-viewer-container/formation-viewer-container.component';
 
 const routes: Routes = [
-    { path: 'formatie', pathMatch: 'full', component: FormationViewerContainerComponent },
-    { path: '', component: FormationCreatorContainerComponent }
+    { path: 'formatie', component: FormationViewerContainerComponent },
+    { path: '', component: FormationCreatorContainerComponent },
+    { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
