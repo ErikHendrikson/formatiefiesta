@@ -22,7 +22,12 @@ export class PartyDisplayComponent {
             return;
         }
 
-        const link = `https://formatiefiesta.vercel.app/formatie?name=${encodeURIComponent(this.name)}&selectedParties=${encodeURIComponent(selectedPartyIds.join(','))}`;
+        const protocol = window.location.protocol;
+        const hostname = window.location.hostname;
+        const port = window.location.port ? `:${window.location.port}` : '';
+        const baseUrl = `${protocol}//${hostname}${port}`;
+
+        const link = `${baseUrl}/formatie?name=${encodeURIComponent(this.name)}&selectedParties=${encodeURIComponent(selectedPartyIds.join(','))}`;
 
         if (action === 'whatsapp') {
             const message = `Ik heb een regering samengesteld: ${link}`;
