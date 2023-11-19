@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "kabinetsformatie": {
+        "formatiefiesta": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/kabinetsformatie",
+                        "outputPath": "dist/formatiefiesta",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
@@ -66,10 +66,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "kabinetsformatie:build:production"
+                            "buildTarget": "formatiefiesta:build:production"
                         },
                         "development": {
-                            "buildTarget": "kabinetsformatie:build:development"
+                            "buildTarget": "formatiefiesta:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "buildTarget": "kabinetsformatie:build"
+                        "buildTarget": "formatiefiesta:build"
                     }
                 },
                 "test": {

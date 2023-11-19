@@ -1,0 +1,15 @@
+.formation-viewer {
+
+    &__name {
+        font-size: 2rem;
+        margin: 2rem;
+        text-align: center;
+    }
+}
+
+canvas {
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }

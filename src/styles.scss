@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@fortawesome/fontawesome-free/css/all.css';
 
 html {
     height: 100vh;
@@ -28,4 +29,19 @@ body {
 
 .mdc-evolution-chip__text-label.mat-mdc-chip-action-label {
     width: 100%;
+}
+
+.whatsapp {
+    background-color: #25D366;
+    color: #fff;
+}
+
+.share {
+    background-color: black;
+    color: #fff;
+}
+
+.party-display__snackbar {
+    width: 40px !important;
+    max-width: 40px !important;
 }

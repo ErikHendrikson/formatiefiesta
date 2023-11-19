@@ -1,0 +1,23 @@
+<div class="party-formation__container">
+    <div *ngIf="showSeats" class="party-formation__total">
+        {{150 - remainingSeats().length}}
+    </div>
+
+    <div class="party-formation">
+        <ng-container *ngFor="let party of selectedParties">
+            <ng-container *ngFor="let _ of [].constructor(party.value); let i = index">
+                <app-party-seat class="party-formation__seat" [size]="20" [color]="party.color"></app-party-seat>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngFor="let _ of remainingSeats()">
+            <app-party-seat class="party-formation__seat" [size]="20" [color]="'lightgrey'"></app-party-seat>
+        </ng-container>
+    </div>
+
+    <div *ngIf="selectedParties.length" class="party-formation__legend">
+        <div class="party-formation__legend-item" *ngFor="let party of selectedParties">
+            {{party.label}}: <app-party-seat [size]="20" [color]="party.color"></app-party-seat>
+        </div>
+    </div>
+</div>
