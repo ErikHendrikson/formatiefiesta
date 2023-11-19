@@ -22,7 +22,7 @@ export class PartyDisplayComponent {
             return;
         }
 
-        const link = `localhost:4200/formatie?name=${this.name}&selectedParties=${selectedPartyIds.join(',')}`;
+        const link = `https://formatiefiesta.vercel.app/formatie?name=${this.name}&selectedParties=${selectedPartyIds.join(',')}`;
 
         if (action === 'whatsapp') {
             const message = `Ik heb een regering samengesteld: ${link}`;
