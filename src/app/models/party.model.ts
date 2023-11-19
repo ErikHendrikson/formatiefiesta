@@ -1,4 +1,5 @@
 export interface Party {
     label: string,
-    value: number
+    value: number,
+    color: string
 }

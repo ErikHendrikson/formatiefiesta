@@ -10,5 +10,12 @@ export class PartyDisplayComponent {
     @Input() selectedParties: Party[] = [];
 
     constructor() {
+
+    }
+
+    remainingSeats(): number[] {
+        const totalSeats = this.selectedParties.reduce((acc, party) => acc + party.value, 0);
+        const remaining = 150 - totalSeats;
+        return Array.from({ length: remaining });
     }
 }

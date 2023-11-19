@@ -1,3 +1,31 @@
-<app-party-seat></app-party-seat>
+<div class="party-display__container">
 
-<div *ngFor="let party of selectedParties">{{ party.label }} : {{ party.value }}</div>
+    <div class="party-display__total">
+        {{150 - remainingSeats().length}}
+    </div>
+
+    <div class="party-display">
+        <ng-container *ngFor="let party of selectedParties">
+            <ng-container *ngFor="let _ of [].constructor(party.value); let i = index">
+                <app-party-seat class="party-display__seat" [size]="20" [color]="party.color"></app-party-seat>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngFor="let _ of remainingSeats()">
+            <app-party-seat class="party-display__seat" [size]="20" [color]="'lightgrey'"></app-party-seat>
+        </ng-container>
+    </div>
+
+    <div *ngIf="selectedParties.length" class="party-display__legend">
+        <div class="party-display__legend-item" *ngFor="let party of selectedParties">
+            {{party.label}}: <app-party-seat [size]="20" [color]="party.color"></app-party-seat>
+        </div>
+    </div>
+
+    <button class="party-display__share" extended mat-fab color="accent"
+        aria-label="Example icon button with a filter list icon">
+        <mat-icon>share</mat-icon>
+        Delen
+    </button>
+
+</div>

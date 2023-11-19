@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.mat-mdc-chip-set {
+    // max-width: 250px;
+}
+
+.mat-mdc-chip-set-stacked .mdc-evolution-chip__action {
+    flex-basis: 100%;
+    justify-content: start;
+}
+
+.mat-mdc-chip-set-stacked .mdc-evolution-chip__graphic {
+    flex-grow: 0;
+}
+
+.mdc-evolution-chip__text-label.mat-mdc-chip-action-label {
+    width: 100%;
+}

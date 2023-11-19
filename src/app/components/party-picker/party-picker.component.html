@@ -1,11 +1,26 @@
-<form [formGroup]="partiesForm">
-    <mat-chip-listbox class="mat-mdc-chip-set-stacked" [multiple]="true" aria-label="Parties selection"
-        formControlName="selectedOptions">
-        <mat-chip-option *ngFor="let party of parties" [value]="party.label">
-            <div class="party-picker__option">
-                <span>{{ party.label }}</span>
-                <span>{{ party.value }}</span>
-            </div>
-        </mat-chip-option>
-    </mat-chip-listbox>
-</form>
+<div class="party-picker" [class]="{'party-picker--show': showMenu}">
+    <button class="party-picker__button" mat-mini-fab color="primary" (click)="toggleMenu()"
+        aria-label="Example icon button with a filter list icon">
+        <mat-icon *ngIf="showMenu">chevron_left</mat-icon>
+        <mat-icon *ngIf="!showMenu">chevron_right</mat-icon>
+    </button>
+
+    <form class="party-picker__form" [formGroup]="partiesForm">
+        <!-- <mat-chip-listbox class="mat-mdc-chip-set-stacked" [multiple]="true" aria-label="Parties selection" -->
+        <mat-chip-listbox [multiple]="true" aria-label="Parties selection" formControlName="selectedOptions">
+            @for (party of parties; track party) {
+            <mat-chip-option [value]="party.label" [color]="'primary'">
+                <div class="party-picker__option">
+                    <span>{{ party.label }}</span>
+                    <span>&nbsp;</span>
+                    <span>({{ party.value }})</span>
+                </div>
+            </mat-chip-option>
+            }
+        </mat-chip-listbox>
+
+        <div class="party-picker__total">
+            {{totalSeats().length}}
+        </div>
+    </form>
+</div>
