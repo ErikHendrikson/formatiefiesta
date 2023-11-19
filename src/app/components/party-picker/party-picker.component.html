@@ -1,4 +1,5 @@
 <div class="party-picker" [class]="{'party-picker--show': showMenu}">
+
     <button class="party-picker__button" mat-mini-fab color="primary" (click)="toggleMenu()"
         aria-label="Example icon button with a filter list icon">
         <mat-icon *ngIf="showMenu">chevron_left</mat-icon>
@@ -22,5 +23,7 @@
         <div class="party-picker__total">
             {{totalSeats().length}}
         </div>
+
+        <div class="party-picker__creator">Made by <a href='https://www.erikhendrikson.com'>Erik</a></div>
     </form>
 </div>
