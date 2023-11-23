@@ -14,7 +14,7 @@ export const partiesListData: Party[] = [
     { id: 9, label: 'CU', value: 3, color: '#0071BC' },
     { id: 12, label: 'SGP', value: 3, color: '#4E2F3A' },
     { id: 13, label: 'DENK', value: 3, color: '#FF5000' },
-    { id: 10, label: 'Volt', value: 2, color: '#057DBA' },
+    { id: 10, label: 'Volt', value: 2, color: '#502379' },
     { id: 11, label: 'JA21', value: 1, color: '#0A2C4E' },
     // { id: 15, label: '50PLUS', value: 0, color: '#EB1D24' },
     // { id: 16, label: 'BIJ1', value: 0, color: '#2D308E' },
